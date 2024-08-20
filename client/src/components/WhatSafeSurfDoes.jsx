@@ -13,6 +13,8 @@ const WhatSafeSurfDoes = () => {
               src={home1} 
               alt="Safe Surf Functionality" 
               className="img-fluid" 
+              width={555}
+              height={555}
               style={{ maxWidth: '100%', height: 'auto' }} 
             />
           </Col>

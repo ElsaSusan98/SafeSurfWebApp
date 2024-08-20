@@ -11,6 +11,7 @@ import about2 from "../assets/images/about2.webp";
 import about3 from "../assets/images/about3.webp";
 import WhatSafeSurfDoes from '../components/WhatSafeSurfDoes';
 import Header from '../components/Header';
+import Phishing from '../components/Phishing';
 
 // import Header from '../components/Header';
 
@@ -19,7 +20,7 @@ const HomePage = () => {
   const [url, setUrl] = useState('');
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
- // const navigate = useNavigate();
+  // const navigate = useNavigate();
 
 
   const handleSearch = async () => {
@@ -78,13 +79,13 @@ const HomePage = () => {
 
   return (
     <div className="App">
-  <Header />
+      <Header />
 
       {/* Home Page Content */}
       <div className="bg-image d-flex align-items-center justify-content-center">
         <Container>
           <Row className="justify-content-center">
-          <h2 className="text-white text-center">Protect Yourself: Verify Website Safety Instantly</h2>
+            <h2 className="text-white text-center">Protect Yourself: Verify Website Safety Instantly</h2>
 
             <Col xs={6} md={8} lg={6}>
               <div className="text-white banner-content">
@@ -130,8 +131,23 @@ const HomePage = () => {
       </div>
 
 
-      {/* Some Sample Home Page Content */}
-      <section className="content text-center">
+      <section className="what-is-phishing">
+        <Container>
+          <div className="whole-blue mb-4 mb-md-0">
+            <h2 className="text-center mb-5">What is a phishing website?</h2>
+            <Row className="align-items-center">
+
+              <Col md={12}>
+                <p>
+                  Phishing is a malicious activity through which attackers defraud online users to get their sensitive information. Attackers mimic the features of reputable websites, which aim to disclose personal information such as user credentials for net banking or debit/credit card details, and other personal details. The common strategies used in phishing attacks are social engineering, which leads victims to believe that they are safe, and it’s all part of the data protection. Users will get these fraudulent website URLs via email, instant messaging, or text messages. Besides, phishing is also a kind of social control attack that aims to trick users into giving away account credentials or any private information via a fake message through email which leads to a website that is impersonating a real organisation.
+                </p>
+              </Col>
+            </Row>
+          </div>
+        </Container>
+      </section>
+      <WhatSafeSurfDoes />
+      {/* <section className="content text-center">
         <Container>
           <Row className="justify-content-center">
             <Col xs={12} md={10} lg={8}>
@@ -144,7 +160,7 @@ const HomePage = () => {
             </Col>
           </Row>
         </Container>
-      </section>
+      </section> */}
       <section className="security-section">
         <Container>
           <h2 className="text-center">Our Security Protocols</h2>
@@ -197,9 +213,7 @@ const HomePage = () => {
           </Row>
         </Container>
       </section>
-      <WhatSafeSurfDoes />
-
-    
+     <Phishing />
       <footer>
         <p>© 2024 Safe Surf. All rights reserved.</p>
         <p><a href="#contacts">Contact Us</a> | <a href="#faq">FAQ</a></p>
