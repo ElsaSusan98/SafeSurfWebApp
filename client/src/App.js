@@ -6,7 +6,12 @@ import { Routes, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
+
 import HomePage from "./pages/home";
+import BlogPage from "./pages/blog";
+import ServicePage from "./pages/service";
+import FaqPage from "./pages/faqPage";
+import ContactUsPage from "./pages/contactus";
 // import About from "./pages/aboutus";
 // import Contactus from "./pages/contactus";
 
@@ -20,8 +25,10 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/home" element={<HomePage />} />
-            {/* <Route path="/aboutus" element={<About />} /> */}
-            
+            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/service" element={<ServicePage />} />
+            <Route path="/faq" element={<FaqPage />} />
+            <Route path="/contactus" element={<ContactUsPage />} />
           </Routes>
       </BrowserRouter>
     </StrictMode>
@@ -29,33 +36,3 @@ function App() {
 }
 export default App;
 
-// import React from "react";
-// import { useState,useEffect } from "react";
-
-// function App(){
-//   const [data,setData] = useState([{}])
-
-//   useEffect(() =>{
-//     fetch("/members").then(
-//       res =>res.json()
-//     ).then(
-//       data => {
-//         setData(data)
-//         console.log(data)
-//       }
-//     )
-  
-// }, [])
-// return (
-//   <div>
-//     {(typeof data.members === 'undefined') ? (
-//       <p>Loading ...</p>
-//     ) : (
-//       data.members.map((member, i) => (
-//         <p key={i}>{member}</p>
-//       ))
-//     )}
-//   </div>
-// );
-// }
-// export default App

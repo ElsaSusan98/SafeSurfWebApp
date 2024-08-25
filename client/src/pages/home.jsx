@@ -12,6 +12,7 @@ import about3 from "../assets/images/about3.webp";
 import WhatSafeSurfDoes from '../components/WhatSafeSurfDoes';
 import Header from '../components/Header';
 import Phishing from '../components/Phishing';
+import Footer from '../components/Footer';
 
 // import Header from '../components/Header';
 
@@ -79,57 +80,58 @@ const HomePage = () => {
 
   return (
     <div className="App">
-      <Header />
+      <div className='bg-image' style={{minHeight:"100vh"}}>
+        <Header />
 
-      {/* Home Page Content */}
-      <div className="bg-image d-flex align-items-center justify-content-center">
-        <Container>
-          <Row className="justify-content-center">
-            <h2 className="text-white text-center">Protect Yourself: Verify Website Safety Instantly</h2>
+        {/* Home Page Content */}
+        <div className="content-wrapper d-flex align-items-center justify-content-center">
+          <Container>
+            <Row className="justify-content-center">
+              <h2 className="text-white text-center">Protect Yourself: Verify Website Safety Instantly</h2>
 
-            <Col xs={6} md={8} lg={6}>
-              <div className="text-white banner-content">
+              <Col xs={6} md={8} lg={6}>
+                <div className="text-white banner-content">
 
-                <p className="text-white text-center">Your go-to tool for detecting phishing websites.</p>
-                <div className="d-flex flex-column flex-md-row align-items-center">
-                  <input
-                    type="text"
-                    value={url}
-                    onChange={(e) => setUrl(e.target.value)}
-                    placeholder="Enter URL"
-                    className="form-control me-md-2 mb-2 mb-md-0"
-                    style={{ flex: 1 }}  // Make input field flexible
-                  />
-                  <button onClick={handleSearch} className="btn btn-primary">
-                    Predict
-                  </button>
+                  <p className="text-white text-center">Your go-to tool for detecting phishing websites.</p>
+                  <div className="d-flex flex-column flex-md-row align-items-center">
+                    <input
+                      type="text"
+                      value={url}
+                      onChange={(e) => setUrl(e.target.value)}
+                      placeholder="Enter URL"
+                      className="form-control me-md-2 mb-2 mb-md-0"
+                      style={{ flex: 1 }}  // Make input field flexible
+                    />
+                    <button onClick={handleSearch} className="btn px-4 py-2 m-3 round-button">
+                      Predict
+                    </button>
+                  </div>
+
+                  {/* Spinner and Result */}
+                  <div className="mt-3 text-center">
+                    {loading && (
+                      <div className="spinner-container">
+                        <ThreeDots
+                          color="#00BFFF"
+                          height={50}
+                          width={50}
+                          wrapperStyle={{ display: 'flex', justifyContent: 'center' }}
+
+                        />
+                      </div>
+                    )}
+                    {!loading && result && (
+                      <div className={`mt-3 alert ${result.includes('phishing') ? 'alert-danger' : 'alert-info'}`}>
+                        {result}
+                      </div>
+                    )}
+                  </div>
                 </div>
-
-                {/* Spinner and Result */}
-                <div className="mt-3 text-center">
-                  {loading && (
-                    <div className="spinner-container">
-                      <ThreeDots
-                        color="#00BFFF"
-                        height={50}
-                        width={50}
-                        wrapperStyle={{ display: 'flex', justifyContent: 'center' }}
-
-                      />
-                    </div>
-                  )}
-                  {!loading && result && (
-                    <div className={`mt-3 alert ${result.includes('phishing') ? 'alert-danger' : 'alert-info'}`}>
-                      {result}
-                    </div>
-                  )}
-                </div>
-              </div>
-            </Col>
-          </Row>
-        </Container>
+              </Col>
+            </Row>
+          </Container>
+        </div>
       </div>
-
 
       <section className="what-is-phishing">
         <Container>
@@ -213,11 +215,12 @@ const HomePage = () => {
           </Row>
         </Container>
       </section>
-     <Phishing />
-      <footer>
+      <Phishing />
+      {/* <footer>
         <p>© 2024 Safe Surf. All rights reserved.</p>
         <p><a href="#contacts">Contact Us</a> | <a href="#faq">FAQ</a></p>
-      </footer>
+      </footer> */}
+      <Footer />
     </div>
   );
 }
