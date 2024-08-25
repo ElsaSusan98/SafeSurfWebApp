@@ -28,7 +28,7 @@ const FormComponent = () => {
                 <Form.Group controlId="formMessage" className="mt-3">
                   <Form.Control as="textarea" rows={5} placeholder="Write your message..." />
                 </Form.Group>
-                <Button variant="primary" type="submit" className="mt-3">
+                <Button variant="primary" type="submit" className="mt-3 contact-button">
                   Send Message
                 </Button>
               </Form>

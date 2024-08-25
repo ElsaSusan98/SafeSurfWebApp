@@ -40,14 +40,25 @@ const HomePage = () => {
 
       // Update result based on API response
       if (response.data && response.data.result) {
-        setResult(response.data.result); // Directly set the result from the response
+        setResult(response.data.result); 
+
+        setTimeout(() => {
+          setResult(null);
+        }, 3000);
       } else {
         setResult('Unexpected response format from the server.');
+
+        setTimeout(() => {
+          setResult(null);
+        }, 3000);
       }
     } catch (error) {
       // Handle errors
       setResult('Error checking the site.');
       console.error('There was an error making the request!', error);
+      setTimeout(() => {
+        setResult(null);
+      }, 3000);
     } finally {
       setLoading(false);  // End loading state
     }

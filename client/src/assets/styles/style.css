@@ -396,6 +396,11 @@ nav ul li a {
   height: 50px;
   padding: 10px;
 }
+.round-button:hover{
+  border: 2px solid #3657CD;
+  background-color: #fff;
+  color: #3657CD !important;
+}
 .standard-blog-area p{
   padding: 0;
 }
@@ -451,4 +456,7 @@ nav ul li a {
   color: #3657CD;
   font-size: 24px;
   margin-bottom: 12px;
+}
+.contact-button{
+  background-color: #3557cd;
 }

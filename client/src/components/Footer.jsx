@@ -13,13 +13,13 @@ const Footer = () => {
         <Row>
           <Col lg={3} md={6}>
             <img src={logo}  height={150} width={"auto"} alt="safesurf"></img>
-            <h5 className='text-white'>SAFE SURF</h5>
+            <h5 className='text-white text-center'>SAFE SURF</h5>
           </Col>
           <Col lg={3} md={6}>
             <h5>KNOW MORE</h5>
             <ul className="list-unstyled">
               <li><Link to="/">HOME</Link></li>
-              <li><Link to="/aboutus">ABOUT</Link></li>
+              <li><Link to="/blog">BLOG</Link></li>
               <li><Link to="/faq">FAQ</Link></li>
               <li><Link to="/contactus">CONTACT</Link></li>
             </ul>
@@ -27,8 +27,8 @@ const Footer = () => {
           <Col lg={3} md={6}>
             <h5>HELP</h5>
             <ul className="list-unstyled">
-              <li><Link to="/aboutus">OUR STORY</Link></li>
-              <li><Link to="/search">PREDICT</Link></li>
+              <li><Link to="/services">OUR STORY</Link></li>
+              <li><Link to="/services">SERVICES</Link></li>
               <li><Link to="/faq">FAQ</Link></li>
             </ul>
           </Col>

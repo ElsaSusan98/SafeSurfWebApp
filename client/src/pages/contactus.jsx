@@ -31,7 +31,7 @@ const ContactUsPage = () => {
                                     <Card.Text>
                                         We've got live Social Experts waiting to help you Monday to Friday from 9am to 5pm EST.
                                     </Card.Text>
-                                    <Button variant="primary" href="#">Chat With Us</Button>
+                                    <Button href="#" className='contact-button'>Chat With Us</Button>
                                 </Card.Body>
                             </Card>
                         </Col>
@@ -41,9 +41,9 @@ const ContactUsPage = () => {
                                     <FontAwesomeIcon icon={faEnvelope} />                  
                                     <Card.Title>Send Us Email</Card.Title>
                                     <Card.Text>
-                                        Drop us an email at <a href="mailto:cycure.agency@mail.com">aleyase@roehampton.ac.uk</a> and you'll receive a reply within 24 hrs.
+                                        Drop us an email at <a href="mailto:aleyase@roehampton.ac.uk">aleyase@roehampton.ac.uk</a> and you'll receive a reply within 24 hrs.
                                     </Card.Text>
-                                    <Button variant="primary" href="#">Send Us Email</Button>
+                                    <Button variant="primary" href="#" className='contact-button'>Send Us Email</Button>
                                 </Card.Body>
                             </Card>
                         </Col>
@@ -55,7 +55,7 @@ const ContactUsPage = () => {
                                     <Card.Text>
                                         Give us a ring. Our Experts are standing by Monday to Friday from 9am to 5pm EST.
                                     </Card.Text>
-                                    <Button variant="primary" href="#">Call Us</Button>
+                                    <Button variant="primary" href="#" className='contact-button'>Call Us</Button>
                                 </Card.Body>
                             </Card>
                         </Col>
