@@ -4,10 +4,10 @@ Safe Surf is your go-to tool for staying safe online. Our web application analyz
 
 ## Data Collection
 
-Phishing URL and Legitimate URL dataset can be found under the Dataset folder.
-1. Beningn_list_big_final.csv: This file conatins a total number 35378 URL and from this 5000 url selected. https://www.unb.ca/cic/datasets/url-2016.html.
-2. verified_online :This file contain a dataset of phishing URLs download from the https://www.phishtank.com/developer_info.php.
-3. url_features.csv : This file contains the 10000 extracted features from both legitimate and phishing url dataset.
+Phishing URLs and Legitimate URL datasets can be found under the Dataset folder.
+1. Beningn_list_big_final.csv: This file contains a total number of 35378 URLs and from this 5000 URLs were selected. https://www.unb.ca/cic/datasets/url-2016.html.
+2. verified_online: This file contains a dataset of phishing URLs downloaded from the https://www.phishtank.com/developer_info.php.
+3. url_features.csv: This file contains the 10000 extracted features from both legitimate and phishing url datasets.
 
 ## Feature Extraction
 
@@ -17,22 +17,23 @@ The feature extraction code can be found in FeatExtract.ipynb
 
 ## Models & Training
 
-This module trains the extracted features with various machine learning models. Which include 
+This module trains the extracted features with various machine-learning models. Which include 
 1. Decision tree
 2. XGBoost
 3. Random Forest
 4. Logical regression 
 5. Support vector machines
-Evaluate the performance of the trained model and select the best-performed model for deployment.All these model testing and traing can be found in Finalmodel.ipynb file.
+   
+Evaluate the performance of the trained model and select the best-performed model for deployment. All these model testing and training can be found in the Finalmodel.ipynb file.
 
 ## Installation
 
-Requirements :Python 3.8 or higher
+Requirements:Python 3.8 or higher
 pip package manager
 React js (for frontend development)
 Git
 
-### For frontend In the project directory, you can run:
+### For frontend In the project directory, you can run the:
 
 Install Node.js dependencies:
 cd client
